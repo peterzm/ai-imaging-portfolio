@@ -1,0 +1,24 @@
+MODEL PARAMETERS
+----------------
+test_size = 0.35
+random_state = 42
+n_estimators = 600
+
+CLASSIFICATION REPORT
+---------------------
+              precision    recall  f1-score   support
+
+           0       1.00      0.98      0.99        57
+           1       0.97      1.00      0.98        61
+           2       1.00      1.00      1.00        57
+           3       0.98      0.95      0.97        62
+           4       0.97      1.00      0.99        66
+           5       0.96      0.96      0.96        76
+           6       0.98      0.98      0.98        59
+           7       0.98      0.98      0.98        65
+           8       0.96      0.96      0.96        55
+           9       0.97      0.96      0.96        71
+
+    accuracy                           0.98       629
+   macro avg       0.98      0.98      0.98       629
+weighted avg       0.98      0.98      0.98       629
