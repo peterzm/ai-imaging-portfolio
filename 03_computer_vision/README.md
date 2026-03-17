@@ -1,1 +1,10 @@
 ﻿# Computer Vision
+
+01_image_features_classification.ipynb
+02_hog_feature_classification.ipynb
+03_sobel_gradient_maps_scientific_interfaces.ipynb
+04_edge_detection_scientific_images.ipynb
+05_texture_features_scientific_images.ipynb
+06_lbp_texture_analysis.ipynb
+07_glcm_texture_features.ipynb
+08_region_based_analysis_intro.ipynb
