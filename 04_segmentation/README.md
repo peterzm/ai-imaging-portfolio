@@ -1,1 +1,9 @@
 ﻿# Image Segmentation
+
+01_thresholding_and_binarization.ipynb
+02_morphology_for_mask_cleanup.ipynb
+03_connected_components_region_properties.ipynb
+04_watershed_segmentation.ipynb
+05_scientific_image_segmentation_pipeline.ipynb
+06_porosity_particle_analysis.ipynb
+07_feature_extraction_from_segmented_regions.ipynb
