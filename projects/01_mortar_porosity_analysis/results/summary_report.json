@@ -1,0 +1,35 @@
+{
+    "acquisition": {
+        "equipment": "Nikon XT H 225",
+        "energy_kV": 150,
+        "pixel_size_um": 20,
+        "material": "Mortero de cemento",
+        "phases": [
+            "Poros",
+            "Resina",
+            "Matriz de cemento"
+        ]
+    },
+    "porosity": {
+        "total_pct": 1.3717,
+        "resin_pct": 18.4004,
+        "cement_pct": 80.2279,
+        "area_roi_mm2": 357.2432
+    },
+    "pore_statistics": {
+        "n_pores": 69,
+        "diameter_mean_um": 188.4,
+        "diameter_median_um": 137.27,
+        "diameter_std_um": 236.09,
+        "diameter_max_um": 1503.92,
+        "circularity_mean": 1.1119,
+        "circularity_std": 0.2392
+    },
+    "pipeline": {
+        "filter_used": "median",
+        "opening_radius": 2,
+        "closing_radius": 2,
+        "min_pore_size_px": 2,
+        "roi_threshold": 0.08
+    }
+}
