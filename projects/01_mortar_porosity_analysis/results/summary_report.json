@@ -25,6 +25,15 @@
         "circularity_mean": 0.9502,
         "circularity_std": 0.1687
     },
+    "resin_statistics": {
+        "n_regions": 1687,
+        "diameter_mean_um": 186.99,
+        "diameter_median_um": 168.88,
+        "diameter_std_um": 121.05,
+        "diameter_max_um": 782.74,
+        "circularity_mean": 0.8579,
+        "circularity_std": 0.217
+    },
     "pipeline": {
         "filter_used": "median",
         "opening_radius": 2,
