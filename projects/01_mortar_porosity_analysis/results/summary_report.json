@@ -22,8 +22,8 @@
         "diameter_median_um": 137.27,
         "diameter_std_um": 236.09,
         "diameter_max_um": 1503.92,
-        "circularity_mean": 1.1119,
-        "circularity_std": 0.2392
+        "circularity_mean": 0.9502,
+        "circularity_std": 0.1687
     },
     "pipeline": {
         "filter_used": "median",
