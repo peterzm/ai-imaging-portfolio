@@ -1,0 +1,7 @@
+sample_index,true_label,predicted_label,confidence,correct
+121,8,1,0.99520844,False
+107,8,2,0.8730384,False
+168,6,8,0.86832964,False
+36,2,1,0.86431426,False
+218,0,4,0.833121,False
+96,8,1,0.825797,False
