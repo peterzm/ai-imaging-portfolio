@@ -1,0 +1,9 @@
+{
+    "number_of_experiments": 5,
+    "best_experiment": "mlp_hidden128_lr001_adam",
+    "best_test_accuracy": 0.9777777777777777,
+    "best_validation_accuracy": 0.9740740740740741,
+    "comparison_table": "C:\\Users\\Peter\\ai-imaging-portfolio\\06_explainability_and_evaluation\\results\\04_experiment_comparison.csv",
+    "best_experiment_file": "C:\\Users\\Peter\\ai-imaging-portfolio\\06_explainability_and_evaluation\\results\\04_best_experiment.json",
+    "environment_file": "C:\\Users\\Peter\\ai-imaging-portfolio\\06_explainability_and_evaluation\\results\\04_environment_info.json"
+}

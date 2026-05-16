@@ -1,0 +1,11 @@
+{
+    "experiment_name": "mlp_hidden128_lr0005_adam",
+    "seed": 42,
+    "batch_size": 32,
+    "learning_rate": 0.0005,
+    "n_epochs": 30,
+    "hidden_dim": 128,
+    "optimizer": "Adam",
+    "dataset": "sklearn_digits",
+    "model": "MLPClassifier"
+}

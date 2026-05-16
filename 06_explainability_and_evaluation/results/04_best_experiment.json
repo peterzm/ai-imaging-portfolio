@@ -1,0 +1,17 @@
+{
+    "experiment_name": "mlp_hidden128_lr001_adam",
+    "seed": 42,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "n_epochs": 30,
+    "hidden_dim": 128,
+    "optimizer": "Adam",
+    "final_train_accuracy": 0.9968178202068417,
+    "final_val_accuracy": 0.9740740740740741,
+    "test_accuracy": 0.9777777777777777,
+    "test_loss": 0.082002496112276,
+    "elapsed_time_seconds": 2.7165801525115967,
+    "config_path": "C:\\Users\\Peter\\ai-imaging-portfolio\\06_explainability_and_evaluation\\results\\experiments\\mlp_hidden128_lr001_adam\\config.json",
+    "history_path": "C:\\Users\\Peter\\ai-imaging-portfolio\\06_explainability_and_evaluation\\results\\experiments\\mlp_hidden128_lr001_adam\\history.csv",
+    "model_path": "C:\\Users\\Peter\\ai-imaging-portfolio\\06_explainability_and_evaluation\\results\\experiments\\mlp_hidden128_lr001_adam\\model.pt"
+}
