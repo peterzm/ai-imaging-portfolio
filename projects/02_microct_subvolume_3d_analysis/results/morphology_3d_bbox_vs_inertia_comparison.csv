@@ -1,0 +1,15 @@
+phase,morphology_class_3d,morphology_class_3d_inertia,number_of_objects
+pores,compact_pore,rounded_pore_inertia,163
+pores,elongated_pore,elongated_pore_inertia,32
+pores,irregular_pore,irregular_pore_inertia,25
+pores,elongated_pore,irregular_pore_inertia,6
+pores,irregular_pore,elongated_pore_inertia,4
+pores,irregular_pore,rounded_pore_inertia,2
+resin,irregular_resin,irregular_resin_inertia,479
+resin,compact_resin,rounded_resin_inertia,434
+resin,elongated_resin,elongated_resin_inertia,431
+resin,compact_resin,irregular_resin_inertia,155
+resin,elongated_resin,irregular_resin_inertia,103
+resin,irregular_resin,elongated_resin_inertia,94
+resin,irregular_resin,rounded_resin_inertia,60
+resin,compact_resin,elongated_resin_inertia,1
