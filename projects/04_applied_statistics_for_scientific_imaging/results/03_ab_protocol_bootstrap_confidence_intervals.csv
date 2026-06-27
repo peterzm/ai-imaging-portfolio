@@ -1,0 +1,7 @@
+metric,direction,observed_difference_B_minus_A,bootstrap_ci_95_lower,bootstrap_ci_95_upper,improvement_supported_by_ci
+segmentation_abs_error,lower_is_better,-0.033771859097743,-0.03572809830405293,-0.03183310614130958,True
+abs_porosity_error,lower_is_better,-0.0030028844559269897,-0.004400894556734486,-0.001624788177830734,True
+quality_score,higher_is_better,22.458148476757174,21.148456427720095,23.71524626457776,True
+snr_drifted,higher_is_better,1.547642881615234,1.4603095453457648,1.6361070990101674,True
+cnr_drifted,higher_is_better,5.205636607043587,5.0028768123787035,5.404703812564283,True
+detectability_score,higher_is_better,0.207632106824525,0.17629927692783018,0.2378269883393263,True
