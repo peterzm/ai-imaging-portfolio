@@ -1,10 +1,10 @@
 # Applied Scientific Imaging Projects
 
-This folder contains applied projects focused on scientific imaging, computer vision, segmentation, quantitative image analysis, and machine learning workflows.
+This folder contains applied projects focused on scientific imaging, computer vision, segmentation, quantitative image analysis, applied statistics, and machine learning workflows.
 
-The goal of this section is to demonstrate how the technical modules of the repository can be applied to real scientific imaging problems using reproducible Python pipelines.
+The goal of this section is to demonstrate how the technical modules of the repository can be applied to scientific imaging and experimental-data problems using reproducible Python pipelines. Unlike the previous sections, which are organized as technical foundations, this folder is designed as a growing project portfolio.
 
-Unlike the previous sections, which are organized as technical foundations, this folder is designed as a growing project portfolio. New datasets, imaging modalities, and case studies will be added over time.
+New datasets, imaging modalities, statistical workflows, and case studies will be added over time.
 
 ---
 
@@ -12,14 +12,17 @@ Unlike the previous sections, which are organized as technical foundations, this
 
 The projects in this folder are designed to show practical ability to:
 
-- define a scientific imaging problem
-- organize image data and metadata
+- define a scientific imaging or experimental-data problem
+- organize image data, metadata, and derived feature tables
 - build reproducible analysis pipelines
 - apply classical computer vision and machine learning methods
 - perform segmentation and region-based measurements
 - extract quantitative descriptors from 2D and 3D images
 - analyze spatial variability in volumetric data
 - detect anomalous regions using interpretable machine learning
+- apply statistical modeling, validation, and uncertainty analysis
+- compare experimental protocols using A/B testing and effect sizes
+- analyze time-series trends, instrumental drift, and outlier behavior
 - generate figures and tables suitable for reporting
 - document limitations and future improvements
 
@@ -32,11 +35,12 @@ The projects in this folder are designed to show practical ability to:
 | `01_mortar_porosity_analysis` | Quantitative analysis of pores and phases in microCT images of mortar | 2D microCT slice | Thresholding, morphology, connected components, region properties, pore size analysis | Completed |
 | `02_microct_subvolume_3d_analysis` | 3D phase segmentation and object-level analysis of a microCT subvolume | 3D microCT stack | 3D volume loading, phase segmentation, mask refinement, connected components, object feature extraction, quantitative 3D analysis | Completed |
 | `03_3d_microct_process_monitoring` | Spatial quality monitoring and anomaly detection from previously segmented 3D microCT data | 3D microCT-derived feature table | Feature extraction, slice-wise monitoring, PCA, Isolation Forest, interpretable anomaly categories | Completed |
-| `04_multimodal_neutron_xray_registration` | Registration and comparison of neutron and X-ray tomography datasets | 3D neutron CT and X-ray CT volumes | Multimodal registration, transformation handling, bivariate histograms, voxel-wise comparison | Planned |
-| `05_permeability_from_3d_microct_features` | Image-based prediction or interpretation of porous-media properties from 3D CT data | 3D rock or porous-material volumes | 3D feature extraction, porosity/connectivity metrics, classical ML, physics-informed interpretation | Planned |
-| `06_small_dataset_scientific_imaging_dl` | Deep learning strategies for small scientific imaging datasets | 2D/3D scientific images | Transfer learning, data augmentation, model evaluation, explainability | Planned |
+| `04_applied_statistics_for_scientific_imaging` | Applied statistical analysis of a synthetic scientific imaging workflow inspired by microCT acquisition and segmentation | Synthetic microCT-inspired tabular dataset | Physics-informed data generation, regression, model validation, A/B testing, bootstrap confidence intervals, effect sizes, time-series trends, outlier detection | Completed |
+| `05_multimodal_neutron_xray_registration` | Registration and comparison of neutron and X-ray tomography datasets | 3D neutron CT and X-ray CT volumes | Multimodal registration, transformation handling, bivariate histograms, voxel-wise comparison | Planned |
+| `06_permeability_from_3d_microct_features` | Image-based prediction or interpretation of porous-media properties from 3D CT data | 3D rock or porous-material volumes | 3D feature extraction, porosity/connectivity metrics, classical ML, physics-informed interpretation | Planned |
+| `07_small_dataset_scientific_imaging_dl` | Deep learning strategies for small scientific imaging datasets | 2D/3D scientific images | Transfer learning, data augmentation, model evaluation, explainability | Planned |
 
-This list is not fixed. The folder will continue to grow with additional projects, including tomography-based workflows, neutron imaging data, multimodal registration, 3D image analysis, and volumetric deep learning.
+This list is not fixed. The folder will continue to grow with additional projects, including tomography-based workflows, neutron imaging data, multimodal registration, 3D image analysis, applied statistics, physics-informed synthetic data, and volumetric deep learning.
 
 ---
 
@@ -97,6 +101,25 @@ This project demonstrates how segmented 3D imaging data can be transformed into 
 
 ---
 
+### 04 · Applied Statistics for Scientific Imaging
+
+The fourth completed project applies statistical modeling and validation to a synthetic scientific imaging workflow inspired by microCT acquisition and segmentation.
+
+The workflow includes:
+
+- generating a synthetic but physically motivated microCT-inspired dataset
+- modeling signal, noise, CNR, SNR, spatial detectability, detector drift, and segmentation error
+- comparing standard and optimized acquisition protocols
+- training regression models to predict expected segmentation error
+- validating models with train/test metrics and cross-validation
+- inspecting residuals and feature importance
+- performing A/B testing with Welch tests, Mann-Whitney tests, Cohen's d, and bootstrap confidence intervals
+- analyzing time-series trends, rolling statistics, drift behavior, and outlier detection performance
+
+This project demonstrates applied statistics skills in a scientific imaging context, including regression, model validation, uncertainty analysis, A/B testing, and time-series trend analysis.
+
+---
+
 ## Project Template
 
 Each project should follow a clear and reproducible structure:
@@ -106,7 +129,7 @@ project_name/
 ├── notebooks/
 ├── data/
 ├── figures/
-├── outputs/
+├── outputs/ or results/
 ├── models/
 └── README.md
 ```
@@ -143,9 +166,10 @@ A strong project should answer:
 
 ```text
 What scientific problem is being addressed?
-What type of image data is used?
-What preprocessing steps were applied?
+What type of data is used?
+What preprocessing or simulation steps were applied?
 What method was used and why?
+How were models or statistical results validated?
 What quantitative results were obtained?
 What are the limitations of the workflow?
 How could the project be improved or extended?
@@ -153,9 +177,9 @@ How could the project be improved or extended?
 
 ---
 
-## Scientific Imaging Context
+## Scientific Imaging and Applied Statistics Context
 
-The projects are connected to imaging problems relevant to:
+The projects are connected to problems relevant to:
 
 - microCT analysis
 - X-ray tomography
@@ -168,8 +192,12 @@ The projects are connected to imaging problems relevant to:
 - quantitative image-based measurements
 - spatial monitoring of 3D volumes
 - anomaly detection in scientific imaging data
+- regression and statistical validation
+- A/B testing for experimental protocol comparison
+- time-series analysis of image-quality metrics
+- physics-informed synthetic data generation
 
-The emphasis is on applied workflows that combine domain knowledge with image processing and machine learning.
+The emphasis is on applied workflows that combine domain knowledge with image processing, statistics, and machine learning.
 
 ---
 
@@ -184,6 +212,8 @@ Future projects may include:
 - deep learning for small scientific datasets
 - 3D U-Net segmentation workflows
 - physics-informed machine learning for image-based material characterization
+- mixed-effects statistical models for batch-level experimental variability
+- Bayesian uncertainty estimation for scientific imaging workflows
 
 ---
 
@@ -191,4 +221,4 @@ Future projects may include:
 
 Peter Zabala Medina, PhD  
 Physicist | Scientific Imaging Researcher | Applied Machine Learning  
-Scientific Imaging • Computer Vision • Tomography • Machine Learning
+Scientific Imaging • Computer Vision • Tomography • Statistics • Machine Learning
