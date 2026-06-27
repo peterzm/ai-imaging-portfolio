@@ -1,0 +1,7 @@
+metric,direction,rule,threshold,n_detected_outliers,detected_outlier_rate
+relative_noise_drifted,lower_is_better,> P97,0.16142962972848945,30,0.03
+snr_drifted,higher_is_better,< P3,0.8085224290833751,30,0.03
+cnr_drifted,higher_is_better,< P3,4.235762816148991,30,0.03
+segmentation_abs_error,lower_is_better,> P97,0.11344410592991672,30,0.03
+abs_porosity_error,lower_is_better,> P97,0.04099960742300627,30,0.03
+quality_score,higher_is_better,< P3,24.61502391516685,30,0.03

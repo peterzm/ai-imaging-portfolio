@@ -1,0 +1,7 @@
+metric,true_positives,false_positives,false_negatives,true_negatives,precision,recall
+relative_noise_drifted,10,0,20,970,1.0,0.3333333333333333
+snr_drifted,0,7,30,963,0.0,0.0
+cnr_drifted,0,1,30,969,0.0,0.0
+segmentation_abs_error,1,0,29,970,1.0,0.03333333333333333
+abs_porosity_error,4,10,26,960,0.2857142857142857,0.13333333333333333
+quality_score,0,0,30,970,,0.0
