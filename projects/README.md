@@ -1,10 +1,10 @@
 # Applied Scientific Imaging Projects
 
-This folder contains applied projects focused on scientific imaging, computer vision, segmentation, quantitative image analysis, applied statistics, and machine learning workflows.
+This folder contains applied projects focused on scientific imaging, computer vision, segmentation, quantitative image analysis, applied statistics, machine learning workflows, and dashboard-oriented reporting.
 
 The goal of this section is to demonstrate how the technical modules of the repository can be applied to scientific imaging and experimental-data problems using reproducible Python pipelines. Unlike the previous sections, which are organized as technical foundations, this folder is designed as a growing project portfolio.
 
-New datasets, imaging modalities, statistical workflows, and case studies will be added over time.
+New datasets, imaging modalities, statistical workflows, BI dashboards, and case studies will be added over time.
 
 ---
 
@@ -23,6 +23,8 @@ The projects in this folder are designed to show practical ability to:
 - apply statistical modeling, validation, and uncertainty analysis
 - compare experimental protocols using A/B testing and effect sizes
 - analyze time-series trends, instrumental drift, and outlier behavior
+- transform scientific analysis outputs into SQL-ready reporting tables
+- build Power BI dashboards for technical monitoring and communication
 - generate figures and tables suitable for reporting
 - document limitations and future improvements
 
@@ -36,11 +38,12 @@ The projects in this folder are designed to show practical ability to:
 | `02_microct_subvolume_3d_analysis` | 3D phase segmentation and object-level analysis of a microCT subvolume | 3D microCT stack | 3D volume loading, phase segmentation, mask refinement, connected components, object feature extraction, quantitative 3D analysis | Completed |
 | `03_3d_microct_process_monitoring` | Spatial quality monitoring and anomaly detection from previously segmented 3D microCT data | 3D microCT-derived feature table | Feature extraction, slice-wise monitoring, PCA, Isolation Forest, interpretable anomaly categories | Completed |
 | `04_applied_statistics_for_scientific_imaging` | Applied statistical analysis of a synthetic scientific imaging workflow inspired by microCT acquisition and segmentation | Synthetic microCT-inspired tabular dataset | Physics-informed data generation, regression, model validation, A/B testing, bootstrap confidence intervals, effect sizes, time-series trends, outlier detection | Completed |
-| `05_multimodal_neutron_xray_registration` | Registration and comparison of neutron and X-ray tomography datasets | 3D neutron CT and X-ray CT volumes | Multimodal registration, transformation handling, bivariate histograms, voxel-wise comparison | Planned |
-| `06_permeability_from_3d_microct_features` | Image-based prediction or interpretation of porous-media properties from 3D CT data | 3D rock or porous-material volumes | 3D feature extraction, porosity/connectivity metrics, classical ML, physics-informed interpretation | Planned |
-| `07_small_dataset_scientific_imaging_dl` | Deep learning strategies for small scientific imaging datasets | 2D/3D scientific images | Transfer learning, data augmentation, model evaluation, explainability | Planned |
+| `05_microct_quality_monitoring_powerbi` | BI reporting and quality-monitoring dashboard from real microCT segmentation and anomaly-detection outputs | MicroCT-derived feature tables, representative slice images, SQL database, Power BI dashboard | Python table preparation, representative image export, SQLite reporting database, DAX measures, Power BI dashboards, slice-level monitoring | Completed |
+| `06_multimodal_neutron_xray_registration` | Registration and comparison of neutron and X-ray tomography datasets | 3D neutron CT and X-ray CT volumes | Multimodal registration, transformation handling, bivariate histograms, voxel-wise comparison | Planned |
+| `07_permeability_from_3d_microct_features` | Image-based prediction or interpretation of porous-media properties from 3D CT data | 3D rock or porous-material volumes | 3D feature extraction, porosity/connectivity metrics, classical ML, physics-informed interpretation | Planned |
+| `08_small_dataset_scientific_imaging_dl` | Deep learning strategies for small scientific imaging datasets | 2D/3D scientific images | Transfer learning, data augmentation, model evaluation, explainability | Planned |
 
-This list is not fixed. The folder will continue to grow with additional projects, including tomography-based workflows, neutron imaging data, multimodal registration, 3D image analysis, applied statistics, physics-informed synthetic data, and volumetric deep learning.
+This list is not fixed. The folder will continue to grow with additional projects, including tomography-based workflows, neutron imaging data, multimodal registration, 3D image analysis, applied statistics, business-intelligence dashboards, physics-informed synthetic data, and volumetric deep learning.
 
 ---
 
@@ -120,6 +123,29 @@ This project demonstrates applied statistics skills in a scientific imaging cont
 
 ---
 
+### 05 · MicroCT Quality Monitoring Dashboard with Power BI
+
+The fifth completed project converts real microCT segmentation and anomaly-detection outputs into a compact Power BI dashboard.
+
+The workflow includes:
+
+- reusing segmentation, feature-extraction, and anomaly-detection outputs from previous microCT projects
+- preparing dashboard-ready tables with Python
+- exporting representative slice images for dashboard exploration
+- building a lightweight SQLite reporting database
+- documenting SQL schema and example reporting queries
+- creating Power BI measures with DAX
+- designing a two-page dashboard for quality monitoring and representative slice exploration
+
+The dashboard includes:
+
+- a **MicroCT Quality Monitoring Overview** page with global KPIs, phase-fraction trends, normal vs anomalous slice counts, and anomaly category summaries
+- a **MicroCT Slice Explorer** page for selected representative slices, including slice-level metrics, anomaly labels, and available image files
+
+This project demonstrates how scientific image-analysis outputs can be transformed into a reporting-oriented workflow using Python, SQL, and Power BI.
+
+---
+
 ## Project Template
 
 Each project should follow a clear and reproducible structure:
@@ -135,6 +161,15 @@ project_name/
 ```
 
 Depending on the project, not all folders are required. Some projects may reuse data or processed outputs from previous projects to avoid unnecessary duplication.
+
+Projects that include dashboarding or reporting layers may also include:
+
+```text
+project_name/
+├── powerbi/
+├── sql/
+└── data/dashboard_exports/
+```
 
 ---
 
@@ -154,6 +189,17 @@ Limitations
 Next steps
 ```
 
+For dashboard-oriented projects, the README should also describe:
+
+```text
+Dashboard pages
+Reporting tables
+Data model
+BI tool used
+Key indicators
+Interactive elements
+```
+
 This structure helps communicate the work clearly to both technical and non-technical audiences.
 
 ---
@@ -171,13 +217,14 @@ What preprocessing or simulation steps were applied?
 What method was used and why?
 How were models or statistical results validated?
 What quantitative results were obtained?
+How were the results communicated?
 What are the limitations of the workflow?
 How could the project be improved or extended?
 ```
 
 ---
 
-## Scientific Imaging and Applied Statistics Context
+## Scientific Imaging, Applied Statistics, and Reporting Context
 
 The projects are connected to problems relevant to:
 
@@ -196,8 +243,10 @@ The projects are connected to problems relevant to:
 - A/B testing for experimental protocol comparison
 - time-series analysis of image-quality metrics
 - physics-informed synthetic data generation
+- SQL-based reporting
+- Power BI dashboards for scientific and technical monitoring
 
-The emphasis is on applied workflows that combine domain knowledge with image processing, statistics, and machine learning.
+The emphasis is on applied workflows that combine domain knowledge with image processing, statistics, machine learning, and clear communication of results.
 
 ---
 
@@ -214,6 +263,8 @@ Future projects may include:
 - physics-informed machine learning for image-based material characterization
 - mixed-effects statistical models for batch-level experimental variability
 - Bayesian uncertainty estimation for scientific imaging workflows
+- automated dashboard refresh from Python-generated reporting tables
+- Power BI Service publishing workflows for technical reports
 
 ---
 
