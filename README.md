@@ -1,10 +1,10 @@
-# AI Imaging Portfolio
+# AI Imaging & Applied ML Portfolio
 
-Applied machine learning, computer vision, scientific imaging, tomography, microCT analysis, applied statistics, SQL reporting, and Power BI dashboarding.
+Applied machine learning, computer vision, scientific imaging, tomography, microCT analysis, applied statistics, time-series forecasting, probabilistic modeling, SQL reporting, and Power BI dashboarding.
 
-This repository connects my background in physics, geophysics, tomography, and scientific imaging with modern machine learning, computer vision, data analysis, and business-intelligence workflows.
+This repository connects my background in physics, geophysics, tomography, and scientific imaging with modern machine learning, computer vision, data analysis, forecasting, uncertainty quantification, and business-intelligence workflows.
 
-The goal is to build practical, reproducible, and well-documented pipelines for image analysis problems commonly found in scientific, industrial, and technical reporting contexts.
+The goal is to build practical, reproducible, and well-documented analytical pipelines for scientific, industrial, and data-driven decision problems. The portfolio is centered on scientific imaging while also extending into applied forecasting and operational analytics.
 
 ---
 
@@ -12,7 +12,7 @@ The goal is to build practical, reproducible, and well-documented pipelines for 
 
 This portfolio demonstrates the ability to:
 
-- build machine learning pipelines for scientific datasets
+- build machine learning pipelines for scientific and operational datasets
 - process and analyze 2D and 3D scientific images
 - extract classical computer vision features
 - perform segmentation and region-based measurements
@@ -26,11 +26,17 @@ This portfolio demonstrates the ability to:
 - evaluate models beyond global accuracy
 - analyze model errors and prediction confidence
 - apply visual explainability methods such as Grad-CAM and saliency maps
-- prepare dashboard-ready feature tables from scientific analysis outputs
+- formulate and validate time-series forecasting problems using temporal backtesting
+- compare statistical and machine-learning forecasting models under a common rolling-origin framework
+- build leakage-safe feature engineering and validation pipelines
+- quantify predictive uncertainty using empirical out-of-sample calibration
+- model multi-day risk while preserving temporal dependence
+- connect probabilistic forecasts to asymmetric business costs and operational decisions
+- prepare dashboard-ready feature and forecasting tables
 - create SQL reporting databases from Python-generated results
 - build Power BI dashboards for quality monitoring and technical communication
 - track experiments and organize reproducible results
-- connect image analysis workflows with real scientific imaging problems
+- connect analytical workflows with real scientific, industrial, and business decision problems
 
 ---
 
@@ -63,9 +69,9 @@ ai-imaging-portfolio/
 
 ---
 
-## Applied Scientific Imaging Projects
+## Applied Projects
 
-The `projects/` folder contains applied workflows based on scientific imaging and experimental-data problems.
+The `projects/` folder contains end-to-end workflows based on scientific imaging, experimental data, applied statistics, forecasting, and operational decision problems.
 
 Current completed projects include:
 
@@ -76,6 +82,7 @@ Current completed projects include:
 | `03_3d_microct_process_monitoring` | Spatial quality monitoring and anomaly detection from segmented 3D microCT data | Slice-wise feature extraction, PCA, Isolation Forest, interpretable anomaly categories | Completed |
 | `04_applied_statistics_for_scientific_imaging` | Applied statistical analysis of a synthetic microCT-inspired workflow | Physics-informed simulation, regression, validation, A/B testing, bootstrap confidence intervals, time-series trends | Completed |
 | `05_microct_quality_monitoring_powerbi` | Power BI quality-monitoring dashboard from real microCT segmentation and anomaly-detection outputs | Python table preparation, SQLite reporting database, DAX measures, Power BI dashboarding | Completed |
+| `06_fintech-liquidity-forecasting` | Forecasting daily cash outflows and translating uncertainty into an operational liquidity-reserve policy | Dynamic regression with ARIMA errors, ETS, LightGBM, rolling-origin backtesting, probabilistic calibration, moving-block bootstrap, cost-sensitive reserve optimization | Completed |
 
 Planned project directions include:
 
@@ -84,13 +91,14 @@ Planned project directions include:
 - deep learning strategies for small scientific imaging datasets
 - volumetric segmentation workflows
 - physics-informed machine learning for image-based material characterization
+- additional forecasting, risk, and decision-analytics workflows
 - automated reporting and dashboard refresh workflows
 
 ---
 
-## Scientific Imaging Context
+## Scientific Imaging and Applied Analytics Context
 
-The repository is designed around problems commonly found in scientific imaging, including:
+The repository is designed around problems commonly found in scientific imaging and applied data science, including:
 
 - microCT image analysis
 - X-ray tomography
@@ -104,9 +112,13 @@ The repository is designed around problems commonly found in scientific imaging,
 - anomaly detection in image-derived feature tables
 - statistical validation of imaging workflows
 - image-based classification workflows
+- time-series forecasting and temporal validation
+- probabilistic forecasting and uncertainty calibration
+- operational risk simulation
+- cost-sensitive decision optimization
 - technical reporting and dashboard communication
 
-The focus is not only on training models, but also on building workflows that are interpretable, reproducible, and useful for scientific analysis, industrial inspection, and quality monitoring.
+The focus is not only on training models, but on building workflows that are interpretable, reproducible, properly validated, and useful for scientific analysis, industrial inspection, operational forecasting, and data-driven decision support.
 
 ---
 
@@ -115,10 +127,14 @@ The focus is not only on training models, but also on building workflows that ar
 - Python
 - NumPy
 - pandas
+- SciPy
 - Matplotlib
 - scikit-learn
 - scikit-image
 - OpenCV
+- statsmodels
+- LightGBM
+- SHAP
 - PyTorch
 - TensorFlow / Keras
 - SQLite
@@ -131,11 +147,11 @@ The focus is not only on training models, but also on building workflows that ar
 
 ## Portfolio Philosophy
 
-This repository is organized as a progression from technical foundations to applied scientific imaging workflows.
+This repository is organized as a progression from technical foundations to applied end-to-end analytical workflows.
 
-The early modules provide the core machine learning, computer vision, segmentation, deep learning, and explainability foundations. The `projects/` folder then applies those tools to scientific imaging case studies, including real microCT data, synthetic physics-informed datasets, anomaly detection, statistical validation, and dashboard-based reporting.
+The early modules provide core machine learning, computer vision, segmentation, deep learning, and explainability foundations. The `projects/` folder then applies those skills to complete case studies, including real microCT data, synthetic physics-informed datasets, anomaly detection, statistical validation, dashboard-based reporting, time-series forecasting, probabilistic calibration, and operational decision optimization.
 
-The long-term goal is to develop a portfolio of scientific imaging and applied machine learning projects that demonstrates both technical data skills and domain knowledge in physics-based imaging.
+The long-term goal is to develop a portfolio that demonstrates both strong domain knowledge in physics-based imaging and transferable applied data-science skills across scientific, industrial, and business problems.
 
 ---
 
@@ -143,4 +159,4 @@ The long-term goal is to develop a portfolio of scientific imaging and applied m
 
 Peter Zabala Medina, PhD  
 Physicist | Scientific Imaging Researcher | Applied Machine Learning  
-Scientific Imaging • Computer Vision • Tomography • Statistics • Machine Learning
+Scientific Imaging • Computer Vision • Forecasting • Statistics • Machine Learning
