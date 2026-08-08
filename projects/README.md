@@ -1,10 +1,10 @@
-# Applied Scientific Imaging Projects
+# Applied Data Science and Machine Learning Projects
 
-This folder contains applied projects focused on scientific imaging, computer vision, segmentation, quantitative image analysis, applied statistics, machine learning workflows, and dashboard-oriented reporting.
+This folder contains end-to-end applied projects focused on scientific imaging, computer vision, segmentation, quantitative image analysis, applied statistics, machine learning, time-series forecasting, uncertainty quantification, operational analytics, and dashboard-oriented reporting.
 
-The goal of this section is to demonstrate how the technical modules of the repository can be applied to scientific imaging and experimental-data problems using reproducible Python pipelines. Unlike the previous sections, which are organized as technical foundations, this folder is designed as a growing project portfolio.
+The goal of this section is to demonstrate how the technical foundations of the repository can be applied to concrete scientific, industrial, and business problems using reproducible Python pipelines. Unlike the previous sections, which are organized as technical foundations, this folder is designed as a growing project portfolio.
 
-New datasets, imaging modalities, statistical workflows, BI dashboards, and case studies will be added over time.
+New datasets, imaging modalities, forecasting problems, statistical workflows, BI dashboards, and case studies will be added over time.
 
 ---
 
@@ -12,8 +12,8 @@ New datasets, imaging modalities, statistical workflows, BI dashboards, and case
 
 The projects in this folder are designed to show practical ability to:
 
-- define a scientific imaging or experimental-data problem
-- organize image data, metadata, and derived feature tables
+- define a scientific, industrial, or business problem
+- organize image, tabular, time-series, metadata, and derived feature data
 - build reproducible analysis pipelines
 - apply classical computer vision and machine learning methods
 - perform segmentation and region-based measurements
@@ -22,28 +22,34 @@ The projects in this folder are designed to show practical ability to:
 - detect anomalous regions using interpretable machine learning
 - apply statistical modeling, validation, and uncertainty analysis
 - compare experimental protocols using A/B testing and effect sizes
-- analyze time-series trends, instrumental drift, and outlier behavior
-- transform scientific analysis outputs into SQL-ready reporting tables
+- analyze time-series trends, instrumental drift, seasonality, events, and outlier behavior
+- build forecasting models with leakage-safe temporal validation
+- compare statistical and machine-learning models under rolling-origin backtesting
+- calibrate probabilistic forecasts using prior out-of-sample errors
+- model multi-day uncertainty while preserving temporal dependence
+- translate predictive uncertainty into cost-sensitive operational decisions
+- transform analysis outputs into SQL- and dashboard-ready reporting tables
 - build Power BI dashboards for technical monitoring and communication
 - generate figures and tables suitable for reporting
-- document limitations and future improvements
+- document assumptions, limitations, validation results, and future improvements
 
 ---
 
 ## Current and Planned Projects
 
-| Project | Scientific Problem | Data Type | Main Methods | Status |
+| Project | Problem | Data Type | Main Methods | Status |
 |---|---|---|---|---|
 | `01_mortar_porosity_analysis` | Quantitative analysis of pores and phases in microCT images of mortar | 2D microCT slice | Thresholding, morphology, connected components, region properties, pore size analysis | Completed |
 | `02_microct_subvolume_3d_analysis` | 3D phase segmentation and object-level analysis of a microCT subvolume | 3D microCT stack | 3D volume loading, phase segmentation, mask refinement, connected components, object feature extraction, quantitative 3D analysis | Completed |
 | `03_3d_microct_process_monitoring` | Spatial quality monitoring and anomaly detection from previously segmented 3D microCT data | 3D microCT-derived feature table | Feature extraction, slice-wise monitoring, PCA, Isolation Forest, interpretable anomaly categories | Completed |
 | `04_applied_statistics_for_scientific_imaging` | Applied statistical analysis of a synthetic scientific imaging workflow inspired by microCT acquisition and segmentation | Synthetic microCT-inspired tabular dataset | Physics-informed data generation, regression, model validation, A/B testing, bootstrap confidence intervals, effect sizes, time-series trends, outlier detection | Completed |
 | `05_microct_quality_monitoring_powerbi` | BI reporting and quality-monitoring dashboard from real microCT segmentation and anomaly-detection outputs | MicroCT-derived feature tables, representative slice images, SQL database, Power BI dashboard | Python table preparation, representative image export, SQLite reporting database, DAX measures, Power BI dashboards, slice-level monitoring | Completed |
-| `06_multimodal_neutron_xray_registration` | Registration and comparison of neutron and X-ray tomography datasets | 3D neutron CT and X-ray CT volumes | Multimodal registration, transformation handling, bivariate histograms, voxel-wise comparison | Planned |
-| `07_permeability_from_3d_microct_features` | Image-based prediction or interpretation of porous-media properties from 3D CT data | 3D rock or porous-material volumes | 3D feature extraction, porosity/connectivity metrics, classical ML, physics-informed interpretation | Planned |
-| `08_small_dataset_scientific_imaging_dl` | Deep learning strategies for small scientific imaging datasets | 2D/3D scientific images | Transfer learning, data augmentation, model evaluation, explainability | Planned |
+| `06_fintech-liquidity-forecasting` | Forecast daily Fintech cash outflows and convert forecast uncertainty into an operational liquidity-reserve decision | Synthetic daily Fintech time series with calendar, promotion, settlement, incident, and macroeconomic variables | Dynamic regression with ARIMA errors, ETS, LightGBM, rolling-origin backtesting, empirical probabilistic calibration, moving-block bootstrap, cost-sensitive reserve optimization | Completed |
+| `07_multimodal_neutron_xray_registration` | Registration and comparison of neutron and X-ray tomography datasets | 3D neutron CT and X-ray CT volumes | Multimodal registration, transformation handling, bivariate histograms, voxel-wise comparison | Planned |
+| `08_permeability_from_3d_microct_features` | Image-based prediction or interpretation of porous-media properties from 3D CT data | 3D rock or porous-material volumes | 3D feature extraction, porosity/connectivity metrics, classical ML, physics-informed interpretation | Planned |
+| `09_small_dataset_scientific_imaging_dl` | Deep learning strategies for small scientific imaging datasets | 2D/3D scientific images | Transfer learning, data augmentation, model evaluation, explainability | Planned |
 
-This list is not fixed. The folder will continue to grow with additional projects, including tomography-based workflows, neutron imaging data, multimodal registration, 3D image analysis, applied statistics, business-intelligence dashboards, physics-informed synthetic data, and volumetric deep learning.
+This list is not fixed. The folder will continue to grow with additional projects spanning tomography, neutron imaging, multimodal registration, 3D image analysis, applied statistics, forecasting, risk analytics, business-intelligence dashboards, physics-informed synthetic data, and volumetric deep learning.
 
 ---
 
@@ -146,6 +152,31 @@ This project demonstrates how scientific image-analysis outputs can be transform
 
 ---
 
+### 06 · Fintech Liquidity Forecasting and Reserve Optimization
+
+The sixth completed project extends the portfolio beyond imaging into an end-to-end forecasting and decision-analytics problem for a simulated Fintech.
+
+The objective is to forecast daily cash outflows and translate predictive uncertainty into a five-day liquidity-reserve recommendation for treasury.
+
+The workflow includes:
+
+- generating a reproducible synthetic daily Fintech dataset with 1,308 observations and 39 variables
+- analyzing calendar effects, promotions, settlements, incidents, macroeconomic variables, and time-series structure
+- comparing simple benchmarks, ETS, dynamic regression with ARIMA errors, and a LightGBM challenger
+- enforcing homogeneous expanding-window rolling-origin backtesting across 20 folds and a 28-day forecast horizon
+- selecting `calendar_promotion_trend_arima011_errors` as the final universal point model
+- reducing MAE to 63.75 ARS million, approximately 40.2% below the historical weekday benchmark
+- calibrating daily probabilistic forecasts from expanding empirical distributions of prior out-of-sample log errors
+- simulating five-day cumulative liquidity risk with a moving-block bootstrap to preserve short-range dependence
+- evaluating reserve policies under asymmetric shortfall and idle-capital costs
+- selecting a P99 five-day reserve under the illustrative 19:1 shortfall-to-idle-capital cost ratio
+- achieving 14 successful windows out of 15 in the final five-day evaluation, with one shortfall window
+- exporting validated dashboard-ready datasets, operational KPIs, audit artifacts, and final figures
+
+This project demonstrates how forecasting accuracy, temporal validation, uncertainty calibration, simulation, and business-cost asymmetry can be combined into an auditable operational decision framework.
+
+---
+
 ## Project Template
 
 Each project should follow a clear and reproducible structure:
@@ -162,13 +193,14 @@ project_name/
 
 Depending on the project, not all folders are required. Some projects may reuse data or processed outputs from previous projects to avoid unnecessary duplication.
 
-Projects that include dashboarding or reporting layers may also include:
+Projects that include dashboarding, reporting, or reusable code may also include:
 
 ```text
 project_name/
-├── powerbi/
+├── src/
+├── dashboard/ or powerbi/
 ├── sql/
-└── data/dashboard_exports/
+└── data/dashboard_exports/ or data/processed/
 ```
 
 ---
@@ -180,8 +212,9 @@ Each project README should include:
 ```text
 Problem
 Dataset
-Scientific context
+Scientific, operational, or business context
 Methods
+Validation strategy
 Pipeline
 Results
 Figures
@@ -192,7 +225,7 @@ Next steps
 For dashboard-oriented projects, the README should also describe:
 
 ```text
-Dashboard pages
+Dashboard pages or dashboard-ready outputs
 Reporting tables
 Data model
 BI tool used
@@ -206,17 +239,20 @@ This structure helps communicate the work clearly to both technical and non-tech
 
 ## Evaluation Criteria
 
-Projects should not only show code execution. They should demonstrate a complete analysis workflow.
+Projects should not only show code execution. They should demonstrate a complete analysis and decision workflow.
 
 A strong project should answer:
 
 ```text
-What scientific problem is being addressed?
+What problem is being addressed?
 What type of data is used?
-What preprocessing or simulation steps were applied?
+What preprocessing, simulation, or feature-engineering steps were applied?
 What method was used and why?
+How was leakage prevented when temporal or predictive modeling was involved?
 How were models or statistical results validated?
+How was uncertainty quantified when relevant?
 What quantitative results were obtained?
+How do the results connect to a scientific, operational, or business decision?
 How were the results communicated?
 What are the limitations of the workflow?
 How could the project be improved or extended?
@@ -224,7 +260,7 @@ How could the project be improved or extended?
 
 ---
 
-## Scientific Imaging, Applied Statistics, and Reporting Context
+## Scientific Imaging, Forecasting, Applied Statistics, and Reporting Context
 
 The projects are connected to problems relevant to:
 
@@ -241,12 +277,16 @@ The projects are connected to problems relevant to:
 - anomaly detection in scientific imaging data
 - regression and statistical validation
 - A/B testing for experimental protocol comparison
-- time-series analysis of image-quality metrics
+- time-series analysis and forecasting
+- rolling-origin temporal validation
+- probabilistic forecasting and uncertainty calibration
+- operational risk simulation
+- asymmetric cost-sensitive decision making
 - physics-informed synthetic data generation
 - SQL-based reporting
-- Power BI dashboards for scientific and technical monitoring
+- Power BI dashboards and dashboard-ready analytical outputs
 
-The emphasis is on applied workflows that combine domain knowledge with image processing, statistics, machine learning, and clear communication of results.
+The emphasis is on applied workflows that combine domain knowledge with image processing, statistics, machine learning, forecasting, reproducible validation, and clear communication of results.
 
 ---
 
@@ -262,7 +302,8 @@ Future projects may include:
 - 3D U-Net segmentation workflows
 - physics-informed machine learning for image-based material characterization
 - mixed-effects statistical models for batch-level experimental variability
-- Bayesian uncertainty estimation for scientific imaging workflows
+- Bayesian uncertainty estimation for scientific and forecasting workflows
+- additional financial forecasting, risk, and operational-analytics case studies
 - automated dashboard refresh from Python-generated reporting tables
 - Power BI Service publishing workflows for technical reports
 
@@ -272,4 +313,4 @@ Future projects may include:
 
 Peter Zabala Medina, PhD  
 Physicist | Scientific Imaging Researcher | Applied Machine Learning  
-Scientific Imaging • Computer Vision • Tomography • Statistics • Machine Learning
+Scientific Imaging • Computer Vision • Forecasting • Statistics • Machine Learning
